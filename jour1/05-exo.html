@@ -1,0 +1,140 @@
+<!-- 05-exo.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+
+        section:first-child{
+            display:flex;
+            justify-content: space-between;
+        }
+
+        section:first-child article{
+            width:33%;
+        }
+
+        section:first-child article a{
+          display: block;
+        }
+
+        @media screen and (max-width:720px){
+            section:first-child article{
+                width:45%;
+            }
+            section:first-child article:last-child{
+                display: none;
+            }
+        }
+
+        section:last-child{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+        }
+
+        section:last-child header{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media screen  and (max-width:720px){
+            section:last-child{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- section>article*3>img[src="https://via.placeholder.com/400x200"]+a[href="#"]>{lire la suite ...} -->
+        <section>
+            <article><img src="https://via.placeholder.com/400x200" alt=""><a href="#">lire la suite ...</a></article>
+            <article><img src="https://via.placeholder.com/400x200" alt=""><a href="#">lire la suite ...</a></article>
+            <article><img src="https://via.placeholder.com/400x200" alt=""><a href="#">lire la suite ...</a></article>
+        </section>
+        <!-- section>article*10>(header>(h2>lorem3)+time>{20/02/2020})+p>lorem20 -->
+        <section>
+            <article>
+                <header>
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos cum dolorum sequi maxime natus incidunt praesentium commodi enim pariatur reiciendis?</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Aliquam, voluptate odio!</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Non, laboriosam facere nostrum itaque ducimus sequi atque laudantium exercitationem fuga facilis delectus vel quidem quia nobis perspiciatis reiciendis cum.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Rem, deleniti praesentium.</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Accusantium laboriosam veritatis quaerat at corrupti blanditiis? Incidunt dicta excepturi, neque eveniet officiis odio ipsa quaerat iure. Est, quae nam.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Perferendis, eligendi dolor.</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Eligendi ipsam soluta explicabo tenetur qui eos ipsum. Sint animi ut voluptate aliquam a asperiores, itaque commodi sunt rerum consequuntur!</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Reprehenderit, corrupti sapiente.</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Alias reprehenderit quasi consequuntur hic, aliquam ad nesciunt mollitia deleniti! Tempore dignissimos consectetur nobis, repellat eaque nisi soluta nemo eum.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Sed, doloribus sequi?</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Alias, tenetur. Quaerat non quibusdam voluptatibus natus odio! Iste architecto saepe laborum mollitia atque sed porro facere ab earum quasi!</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Id, non facilis?</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Omnis reiciendis mollitia numquam illo sed et alias minus animi, esse corrupti id voluptate, consectetur officia qui tempore fugit maxime!</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Ipsa, odit fugiat?</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Laudantium eius eveniet odit quas suscipit earum porro pariatur, voluptates illo qui sapiente repellat sequi expedita hic dolore veritatis alias.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Suscipit, voluptate natus!</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Nobis repellendus neque ullam error soluta in maxime. Veritatis, dicta. Dolor facere magnam perferendis numquam architecto vero sapiente ut nemo!</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Saepe, nisi eveniet.</h2>
+                    <time>20/02/2020</time>
+                </header>
+                <p>Maiores molestiae a, minima repellat debitis sunt id cum, architecto nemo illum animi impedit ad accusantium perferendis quam totam recusandae!</p>
+            </article>
+        </section>
+
+    </div>
+</body>
+</html>
