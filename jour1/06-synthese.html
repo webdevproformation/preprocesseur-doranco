@@ -1,0 +1,79 @@
+<!-- 06-synthese.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        objectif : rappels en html css => batir sur ces concepts 
+        Emmet outil qui permet de générer rapidement des pages html 
+        Emmet = ressemble beaucoup aux sélecteurs
+        p>lorem
+        > écrit à l'intéreur (dans la balise html)
+        * multiplier les élements
+        + écrit à côté
+        $ réaliser des numérotations
+        { } écrire du texte
+        [ ] attribut de balise
+        . => class
+        # => id
+        lorem40 => générer un texte factice de 40 mots
+
+        écrire un lien hypertexte qui contient l'attribut 
+        href="https://google.fr"
+        contient le texte "rechercher sur google"
+        a[href="https://google.fr"]>{rechercher sur google}
+    -->
+    <a href="https://google.fr">rechercher sur google</a>
+    <!-- 
+        Emmet permet aussi de générer du css 
+        p4 => padding:4px
+        m0 => margin: 0 ;
+        m0-a => margin:0 auto; 
+
+        rappels sur display flex et le display grid 
+
+        display flex => permet de mettre les uns à côté des autres des éléments html frère - sur la même ligne
+
+        si je veux que l'espace restant sur la ligne soit mis de manière homogène etre les différents éléments
+        justify-content:space-between ;
+
+        align-items : center ;
+
+        display grid => permet de générer une grille (ou tableau)
+
+        définir combien de colonne a ma grille
+
+        grid-template-columns (gtc avec Emmet)
+        grid-template-columns : 1fr 1fr ; => de deux colonnes
+        grid-template-columns : 1fr 1fr 1fr ; => de trois colonnes
+        grid-template-columns : 1fr 1fr 1fr 1fr ; => de quatre colonnes
+        grid-template-columns : repeat(4,1fr) ; => de quatre colonnes
+
+        espace entre les colonnes de la grille :
+        
+        grid-gap (gg)
+        grid-gap: 10px => met moi 10 pixels entre les colonnes de la grille 
+
+
+        quand j'ai plusieurs paragraphes
+
+        p => sélectionne tous les paragraphes
+        p:first-child => 1er p de la page
+        p:last-child => dernier p de la page
+        p:nth-child(2) => le 2ème p de la page
+
+        responsive de design
+        @m 
+
+        @media screen and (max-width:720px){
+            si mon écran a une taille maximum de 720px alors applique les règle entre les accolades 
+        }
+    -->
+</body>
+</html>
