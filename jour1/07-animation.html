@@ -1,0 +1,95 @@
+<!-- 07-animation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        article{
+            transition: transform 1s , border 1s  , color 1s ;
+        }
+       /*  article:hover{
+            transform: translateY(-20px);
+            border:1px solid black;
+            color:red;
+        } */
+
+        /* article:hover{
+            transform: translateX(-20px); 
+            border:1px solid black;
+            color:red;
+        } */
+
+        /* article:hover{
+            transform: rotate(1000deg);  // rotation sur lui même
+            border:1px solid black;
+            color:red;
+        } */
+
+        article:hover{
+            transform: scale(1.05);  
+            border:1px solid black;
+            color:red;
+        }
+
+
+        @media screen and (max-width:480px){
+            section{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- section qui contient 6 articles 
+        chaque article 
+            titre
+            image 
+
+        en css mettre les articles sous forme de grille 
+        grille de 2 colonnes
+        marge intérieur de 20px
+
+        si l'écran est < 480px 
+        alors la grille a uniquement 1 colonne
+    -->
+   <!--  section>article*6>(h2>lorem3)+img[src="https://via.placeholder.com/900x200"] -->
+    <section>
+        <article>
+            <h2>Lorem, ipsum dolor.</h2>
+            <img src="https://via.placeholder.com/900x200" alt="">
+        </article>
+        <article>
+            <h2>Expedita, placeat minus?</h2>
+            <img src="https://via.placeholder.com/900x200" alt="">
+        </article>
+        <article>
+            <h2>Dolorum, odio pariatur?</h2>
+            <img src="https://via.placeholder.com/900x200" alt="">
+        </article>
+        <article>
+            <h2>Alias, nobis dignissimos!</h2>
+            <img src="https://via.placeholder.com/900x200" alt="">
+        </article>
+        <article>
+            <h2>Aspernatur, enim deleniti!</h2>
+            <img src="https://via.placeholder.com/900x200" alt="">
+        </article>
+        <article>
+            <h2>Laborum, aut voluptate!</h2>
+            <img src="https://via.placeholder.com/900x200" alt="">
+        </article>
+    </section>
+</body>
+</html>
