@@ -1,0 +1,71 @@
+<!-- 08-exo.html  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        ul li{
+            list-style: none;
+        }
+
+        img{
+            max-width: 100%;
+        }
+        section{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+            align-items: center; 
+        }
+        a{
+            transition: font-size 2s;
+        }
+        a:hover{
+            font-size: 1.3rem;
+        }
+        img{
+            transition: transform .3s;
+        }
+        img:hover{
+            transform: translateX(40px);
+        }
+        /* !!!! */
+        img:first-child{
+            transition: transform 1s;
+        }
+        img:first-child:hover{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- nav>ul>li*5>a[href="#"]>lorem1 -->
+    <nav>
+        <ul>
+            <li><a href="#">Lorem.</a></li>
+            <li><a href="#">Eos.</a></li>
+            <li><a href="#">Mollitia.</a></li>
+            <li><a href="#">Dolore.</a></li>
+            <li><a href="#">Tenetur.</a></li>
+        </ul>
+    </nav>
+    <!-- section>img[src="https://via.placeholder.com/400x200"]*5  -->
+    <section>
+        <img src="https://via.placeholder.com/400x200" alt="">
+        <img src="https://via.placeholder.com/400x200" alt="">
+        <img src="https://via.placeholder.com/400x200" alt="">
+        <img src="https://via.placeholder.com/400x200" alt="">
+        <img src="https://via.placeholder.com/400x200" alt="">
+    </section>
+
+
+</body>
+</html>
