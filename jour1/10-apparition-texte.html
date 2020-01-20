@@ -1,0 +1,55 @@
+<!-- 10-apparition-texte.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        article{
+            position: relative;
+            width: 400px;
+           
+        }
+        article div{
+            background: url("https://via.placeholder.com/400x200");
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            z-index: 2;
+            transition: width .3s;
+        }
+        article p{
+            position: absolute;
+            z-index: 1;
+            transition: margin-left .3s;
+            padding: 10px;
+           
+        }
+
+        article:hover div{
+            width:200px;
+        }
+
+        article:hover p{
+            margin-left:200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- article>div+p>lorem -->
+    <article>
+        <div></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam facilis dicta ducimus alias doloremque suscipit, incidunt deleniti sapiente! Saepe adipisci assumenda modi cum? Quo itaque et, enim rem quod quasi
+
+        </p>
+    </article>
+</body>
+</html>
