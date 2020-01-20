@@ -1,0 +1,44 @@
+<!-- 09-keyframe.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        article{
+            width: 400px;
+            animation : apparition 1s;
+            animation-fill-mode:forwards;
+        }
+
+        @keyframes apparition {
+            from{
+                transform: translateY(0);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(-200px);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- article>img[src="https://via.placeholder.com/400x200"]+(h2>lorem3)+p>lorem30 --> 
+    <article>
+        <img src="https://via.placeholder.com/400x200" alt="">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea suscipit architecto nulla minus sit quasi. At eius corrupti unde a excepturi deserunt molestiae. Fuga facilis commodi cum quam laboriosam est.</p>
+    </article>
+</body>
+</html>
