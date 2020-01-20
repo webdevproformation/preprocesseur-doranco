@@ -1,0 +1,82 @@
+<!-- 04-grid-flex.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        ul li{
+            list-style: none;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: repeat(4,1fr) ;/*1fr 1fr 1fr 1fr;*/
+            grid-gap: 10px;
+        }
+
+        @media screen and (max-width:720px){ /*@m*/
+            section{
+                grid-template-columns: repeat(3,1fr) ;
+            }
+        }
+
+        img{
+            max-width: 100%; /*mxw*/
+        }
+
+    </style>
+</head>
+<body>
+    <!-- créer un menu 
+        nav qui contient un ul avec 5 items (li liste item) ayant un lien hypertexte avec un mot
+        en css répartir sur toutes les largeurs de l'écran les différents items
+
+        créer une section
+            20 images
+            en css réaliser une grille de 4 colonnes avec 10 pixel de gouttières entre les colonnes de la grille
+    -->
+   <!--  nav>ul>li*5>a[href="#"]>lorem1 -->
+    <nav>
+        <ul>
+            <li><a href="#">Lorem.</a></li>
+            <li><a href="#">Quae.</a></li>
+            <li><a href="#">Obcaecati. plein de texte </a></li>
+            <li><a href="#">Voluptate.</a></li>
+            <li><a href="#">Molestiae?</a></li>
+        </ul>
+    </nav>
+
+    <!-- section>img[src="https://via.placeholder.com/400x200"]*20 -->
+    <!-- section>img[src="https://via.placeholder.com/400x150?text=image$" alt="image$"]*20 -->
+    <section>
+        <img src="https://via.placeholder.com/400x150?text=image1" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image2" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image3" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image4" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image5" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image6" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image7" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image8" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image9" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image10" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image11" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image12" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image13" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image14" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image15" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image16" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image17" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image18" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image19" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image20" alt="">
+    </section>
+
+</body>
+</html>
