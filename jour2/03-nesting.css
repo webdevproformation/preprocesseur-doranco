@@ -10,7 +10,7 @@ css classique
 }
  */
 /*nesting = imbrication sélection dans un autre sélecteur + ne pas oublier indentation 
-plugun dans visual Prettier
+plugin dans visual Prettier
 Fichier > Préférences > Paramètres > filtrage onsave > cocher Editor: Format On Save
 */
 .a1 {
@@ -23,5 +23,76 @@ Fichier > Préférences > Paramètres > filtrage onsave > cocher Editor: Format 
 .a1 p {
   text-transform: uppercase;
 }
+
+/*imbrication profonde = conseil des imbrications maximum 2*/
+.a2 {
+  width: 300px;
+}
+.a2 p span {
+  color: green;
+}
+.a2 p span {
+  text-decoration: underline;
+}
+
+/* imbrication avec les pseudo sélecteur 
+p:hover
+p:nth-child()
+p:first-child 
+p:last-child 
+p:after
+p:before
+*/
+p {
+  transition: color 1s;
+}
+p:hover {
+  color: blue;
+}
+
+/* imbrication et média query */
+.a2 h2 {
+  font-size: 50px;
+}
+@media screen and (max-width: 900px) {
+  .a2 h2 {
+    font-size: 20px;
+  }
+}
+
+/*en css classique */
+/* .a2 h2 {
+  font-size: 50px;
+}
+@media screen and (max-width: 900px) {
+  .a2 h2 {
+    font-size: 20px;
+  }
+} */
+/*
+1/créer un nouveau fichier sass/04-exo.scss
+2/ créer le fichier 04-exo.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/04-exo.scss ./04-exo.css
+
+Dans le fichier 04-exo.html
+menu > ul >li *5 > a href= # > texte 1 mot
+
+scss 
+menu est une grille de 5 colonnes
+séparation de 10px
+
+le 1ère élement du menu
+lorsque l'on passe la souris dessus => rouge en 1 s
+
+le 2ème élement du menu
+lorsque l'on passe la souris dessus => taille de police va grandir de 20%
+
+le dernier élément du menu 
+changer la couleur de fond dans la couleur voulu
+changer la police dans la couleur voulu
+les deux en .3s
+pas de soucis pour utiliser des variables scss
+*/
 
 /*# sourceMappingURL=03-nesting.css.map */
