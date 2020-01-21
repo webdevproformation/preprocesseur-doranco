@@ -1,0 +1,22 @@
+.p1{
+    font-size: 15px;
+    text-shadow: 2px 2px  grey;
+}
+.p2{
+    @extend .p1;
+    text-transform: uppercase;
+}
+.p3{
+    @extend .p1;
+    color:darkseagreen;
+}
+.p4{
+    @extend .p2;
+    text-decoration: underline;
+}
+.p5{
+    @extend .p4;
+    width: 200px; /*centrer le contenant => le paragraphe */ 
+    margin:0 auto; /*centrer le contenant => le paragraphe */ 
+    background-color: darkturquoise;
+}

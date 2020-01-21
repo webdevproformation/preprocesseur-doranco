@@ -1,0 +1,26 @@
+.p1, .p3, .p2, .p4, .p5 {
+  font-size: 15px;
+  text-shadow: 2px 2px grey;
+}
+
+.p2, .p4, .p5 {
+  text-transform: uppercase;
+}
+
+.p3 {
+  color: darkseagreen;
+}
+
+.p4, .p5 {
+  text-decoration: underline;
+}
+
+.p5 {
+  width: 200px;
+  /*centrer le contenant => le paragraphe */
+  margin: 0 auto;
+  /*centrer le contenant => le paragraphe */
+  background-color: darkturquoise;
+}
+
+/*# sourceMappingURL=02-exo.css.map */

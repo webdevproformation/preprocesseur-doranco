@@ -98,12 +98,12 @@ p{
 }
 
 /*
-créer un fichier 02-exo.html
-contenir 5 paragraphes avec 3 mots de dans
+1/  créer un fichier 02-exo.html
+contenir 5 paragraphes avec 3 mots 
 class p1 , p2 ... p5
-
-créer un fichier sass/02-exo.scss
-
+2/ créer un fichier sass/02-exo.scss
+3/ lancer la commande : sass --watch ./sass/02-exo.scss ./02-exo.css
+4/ dans le fichier sass/02-exo.scss écrire les règles suivantes :
 .p1 taille de police 15px / 
     text shadow 2px 2px grey
 
@@ -119,5 +119,4 @@ créer un fichier sass/02-exo.scss
 .p5 hérité de p4
     largeur de 200px
     centrer dans la page
-
 */
