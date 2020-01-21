@@ -21,6 +21,10 @@ $tablette-portrait: "screen and (min-width:481px) and (max-width:720px)";
 $tablette-paysage: "screen and (min-width:721px) and (max-width:960px)";
 $ordi: "screen and (min-width:961px)";
 
+img {
+  max-width: 100%;
+}
+
 /* mise en forme */
 
 .container {
@@ -49,5 +53,30 @@ header {
     li {
       list-style: none;
     }
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: $grille-4;
+  grid-gap: $marge;
+  @media #{$smartphone-portrait} , #{$smartphone-paysage} ,#{$tablette-portrait} {
+    grid-template-columns: $grille-3;
+  }
+  @media #{$smartphone-portrait} , #{$smartphone-paysage} {
+    grid-template-columns: $grille-2;
+  }
+  @media #{$smartphone-portrait} {
+    grid-template-columns: $grille-1;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: $grille-2;
+  align-items: center;
+  @media #{$smartphone-portrait} , #{$smartphone-paysage} {
+    grid-template-columns: $grille-1;
+    margin: $marge 0;
   }
 }

@@ -1,6 +1,10 @@
 /*.container*/
 /* grilles */
 /* responsive */
+img {
+  max-width: 100%;
+}
+
 /* mise en forme */
 .container {
   margin: 0 auto;
@@ -33,6 +37,39 @@ header nav ul {
 }
 header nav ul li {
   list-style: none;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+@media screen and (max-width:350px), screen and (min-width:351px) and (max-width:480px), screen and (min-width:481px) and (max-width:720px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width:350px), screen and (min-width:351px) and (max-width:480px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width:350px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+@media screen and (max-width:350px), screen and (min-width:351px) and (max-width:480px) {
+  footer {
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+  }
 }
 
 /*# sourceMappingURL=06-exo.css.map */
