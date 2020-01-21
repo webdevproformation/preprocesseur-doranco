@@ -14,6 +14,7 @@ li {
     font-family: Arial;
   }
   &:first-child a {
+    /*attention il faut coller le & avec les : */
     transition: color 1s;
     &:hover {
       color: red;
@@ -34,3 +35,11 @@ li {
     }
   }
 }
+
+/*
+1/créer un nouveau fichier sass/05-variable.scss
+2/ créer le fichier 05-variable.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/05-variable.scss ./05-variable.css
+
+*/

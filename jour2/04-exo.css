@@ -1,3 +1,4 @@
+@charset "UTF-8";
 ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -17,6 +18,7 @@ li a {
   font-family: Arial;
 }
 li:first-child a {
+  /*attention il faut coller le & avec les : */
   transition: color 1s;
 }
 li:first-child a:hover {
@@ -35,5 +37,13 @@ li:last-child a:hover {
   background-color: deepskyblue;
   color: gainsboro;
 }
+
+/*
+1/créer un nouveau fichier sass/05-variable.scss
+2/ créer le fichier 05-variable.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/05-variable.scss ./05-variable.css
+
+*/
 
 /*# sourceMappingURL=04-exo.css.map */
