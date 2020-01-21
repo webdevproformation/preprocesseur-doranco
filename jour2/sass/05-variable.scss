@@ -2,8 +2,13 @@
 pas besoin de mettre le _ devant le nom du fichier
 pas besoin de mettre l'extension à la fin du fichier  
 */
+@import "./responsive";
 
 /*mise en forme*/
+
+img {
+  max-width: 100%;
+}
 
 .container {
   margin: 0 auto;
@@ -11,7 +16,14 @@ pas besoin de mettre l'extension à la fin du fichier
   display: grid;
   grid-template-columns: $grille-default;
   grid-gap: $grille-marge;
+
+  @media #{$smartphone-portrait} , #{$smartphone-paysage} {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
 }
+/*si je suis sur un smatphone portrait => grille de 1 colonnes */
+
 h2 {
   font-size: $font-base * 2; /*pour les valeurs chiffrées => effectuer des calculs */
   margin-bottom: $margin-default + 5px;

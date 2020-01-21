@@ -12,6 +12,10 @@ pas besoin de mettre le _ devant le nom du fichier
 pas besoin de mettre l'extension à la fin du fichier  
 */
 /*mise en forme*/
+img {
+  max-width: 100%;
+}
+
 .container {
   margin: 0 auto;
   width: 960px;
@@ -19,7 +23,14 @@ pas besoin de mettre l'extension à la fin du fichier
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
+@media screen and (max-width:350px), screen and (min-width:351px) and (max-width:480px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
 
+/*si je suis sur un smatphone portrait => grille de 1 colonnes */
 h2 {
   font-size: 32px;
   /*pour les valeurs chiffrées => effectuer des calculs */
