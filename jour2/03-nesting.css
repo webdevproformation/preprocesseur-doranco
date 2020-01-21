@@ -76,7 +76,7 @@ p:hover {
 4/ sass --watch ./sass/04-exo.scss ./04-exo.css
 
 Dans le fichier 04-exo.html
-menu > ul >li *5 > a href= # > texte 1 mot
+menu : nav > ul >li *5 > a href= # > texte 1 mot
 
 scss 
 menu est une grille de 5 colonnes
@@ -90,8 +90,8 @@ le 2ème élement du menu
 lorsque l'on passe la souris dessus => taille de police va grandir de 20%
 
 le dernier élément du menu 
-changer la couleur de fond dans la couleur voulu
-changer la police dans la couleur voulu
+changer la couleur de fond dans la couleur voulue
+changer la police dans la couleur voulue
 les deux en .3s
 pas de soucis pour utiliser des variables scss
 */

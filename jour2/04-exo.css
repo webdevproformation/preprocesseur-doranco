@@ -1,0 +1,39 @@
+ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+@media screen and (max-width: 700px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  font-family: Arial;
+}
+li:first-child a {
+  transition: color 1s;
+}
+li:first-child a:hover {
+  color: red;
+}
+li:nth-child(2) a {
+  transition: font-size 1s;
+}
+li:nth-child(2) a:hover {
+  font-size: 1.2rem;
+}
+li:last-child a {
+  transition: background-color 0.3s, color 0.3s;
+}
+li:last-child a:hover {
+  background-color: deepskyblue;
+  color: gainsboro;
+}
+
+/*# sourceMappingURL=04-exo.css.map */

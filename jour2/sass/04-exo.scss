@@ -1,0 +1,36 @@
+ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  @media screen and (max-width: 700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+li {
+  list-style: none;
+  a {
+    text-decoration: none;
+    font-family: Arial;
+  }
+  &:first-child a {
+    transition: color 1s;
+    &:hover {
+      color: red;
+    }
+  }
+  &:nth-child(2) a {
+    transition: font-size 1s;
+    &:hover {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:last-child a {
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+      background-color: deepskyblue;
+      color: gainsboro;
+    }
+  }
+}
