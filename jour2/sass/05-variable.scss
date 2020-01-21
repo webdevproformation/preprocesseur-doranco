@@ -47,7 +47,7 @@ img {
 4/ sass --watch ./sass/06-exo.scss ./06-exo.css
 dans 06-exo.html
 header
-    deux zones grille avec deux colonnes | si largeur écran 480px colonne 1 se masque
+    deux zones = grille avec deux colonnes | si largeur écran 480px, colonne n°1 se masque
         div
             img
         nav  => les éléments doivent être répartis de manières égales dans la ligne
@@ -63,5 +63,5 @@ footer avec deux zones => grille de 2 colonnes  | si largeur écran 480px 1 colo
     div
         ul>li * 4 > a > lorem1
 
-dans 06-exo.scss utiliser => les variables et l'imports ( créer deux partials ) pour réaliser le design
+dans 06-exo.scss utiliser => les variables et l'imports ( créer deux partials ) pour réaliser le design / les imbrications / heritage 
 */

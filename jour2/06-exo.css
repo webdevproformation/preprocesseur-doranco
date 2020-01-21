@@ -1,0 +1,38 @@
+/*.container*/
+/* grilles */
+/* responsive */
+/* mise en forme */
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+@media screen and (max-width:350px), screen and (min-width:351px) and (max-width:480px), screen and (min-width:481px) and (max-width:720px), screen and (min-width:721px) and (max-width:960px) {
+  .container {
+    width: 100%;
+  }
+}
+
+header {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width:350px), screen and (min-width:351px) and (max-width:480px) {
+  header {
+    grid-template-columns: 1fr;
+  }
+  header div {
+    display: none;
+  }
+}
+header nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li {
+  list-style: none;
+}
+
+/*# sourceMappingURL=06-exo.css.map */

@@ -1,0 +1,53 @@
+/*.container*/
+
+$container: 960px;
+$container-fluid: 100%;
+
+/* grilles */
+$grille-menu: 120px 1fr;
+
+$grille-4: repeat(4, 1fr);
+$grille-3: repeat(3, 1fr);
+$grille-2: repeat(2, 1fr);
+$grille-1: 1fr;
+
+$marge: 20px;
+
+/* responsive */
+
+$smartphone-portrait: "screen and (max-width:350px)";
+$smartphone-paysage: "screen and (min-width:351px) and (max-width:480px)";
+$tablette-portrait: "screen and (min-width:481px) and (max-width:720px)";
+$tablette-paysage: "screen and (min-width:721px) and (max-width:960px)";
+$ordi: "screen and (min-width:961px)";
+
+/* mise en forme */
+
+.container {
+  margin: 0 auto;
+  width: $container;
+  @media #{$smartphone-portrait} , #{$smartphone-paysage} ,#{$tablette-portrait} , #{$tablette-paysage} {
+    width: $container-fluid;
+  }
+}
+
+header {
+  display: grid;
+  grid-template-columns: $grille-menu;
+  grid-gap: $marge;
+  align-items: center;
+  @media #{$smartphone-portrait} , #{$smartphone-paysage} {
+    grid-template-columns: $grille-1;
+    div {
+      display: none;
+    }
+  }
+  nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    li {
+      list-style: none;
+    }
+  }
+}
