@@ -7,7 +7,8 @@ va transformer le scss => css
 
 lancer le terminal
 
-./dart-sass/sass.bat --watch ./sass/01-style.scss ./01-style.css
+.\dart-sass\sass.bat --watch .\sass\01-style.scss .\01-style.css
+Attention aux antislashes
 
 node -v 
 
@@ -17,6 +18,94 @@ sass --version
 
 sass  --watch ./sass/01-style.scss ./01-style.css
 
+attention, il faut être positionné sur le dossier jour2
+il faut avoir créé le dossier sass/01-style.scss
+
+*/
+/* lorsque l'on écrit dans le fichier .scss 
+Lorsque l'on fait une sauvegarde
+automatiquement
+    => message en vert dans le terminal 
+    Compiled sass\01-style.scss to 01-style.css
+    => avoir du css dans le fichier 01-style.css
+*/
+p {
+  color: red;
+}
+
+a {
+  color: blue;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+/*variables */
+/*pour créer une variable 
+$ 
+le nom de la variable voulu 
+: 
+valeur : 1 chiffre , plusieurs chiffres
+mot clé 
+*/
+li {
+  font-size: 18px;
+  background: #fff;
+  border: 1px solid black;
+}
+
+p {
+  font-size: 18px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/*héritage*/
+.btn, .btn-attention, .btn-attention-sm, .btn-confirm {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.btn-confirm {
+  background: cornflowerblue;
+  color: white;
+}
+
+.btn-attention, .btn-attention-sm {
+  background-color: crimson;
+  color: white;
+}
+
+.btn-attention-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/*
+créer un fichier 02-exo.html
+contenir 5 paragraphes avec 3 mots de dans
+class p1 , p2 ... p5
+
+créer un fichier sass/02-exo.scss
+
+.p1 taille de police 15px / 
+    text shadow 2px 2px grey
+
+.p2 hérite de p1
+    tout en majuscule
+
+.p3 hérite de p1
+    changer sa couleur de texte (votre choix)
+
+.p4 hérité de p2
+    souligner
+
+.p5 hérité de p4
+    largeur de 200px
+    centrer dans la page
 
 */
 
