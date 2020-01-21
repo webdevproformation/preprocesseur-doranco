@@ -1,0 +1,137 @@
+<!-- 11-exo.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*réinitialisation*/
+        figure{
+            margin: 0;
+        }
+
+        img{
+            max-width: 100%; /*mxw*/
+        }
+
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        section:first-child{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+            margin-bottom: 20px;
+            animation: apparition-section1 .5s;
+        }
+
+        @keyframes apparition-section1 {
+                from{
+                    transform: translateX(-2000px);
+                }
+                to{
+                    transform: translateX(0);
+                }
+        }
+
+
+        section:first-child article{
+            display: flex; /*tous éléments sur la même ligne */
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        section:last-child{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 10px;
+            animation: apparition-section2 .5s;
+        }
+
+        @keyframes apparition-section2 {
+            from{
+                transform: translateX(2000px);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+
+        section:last-child figure{
+            position: relative;
+        }
+
+        section:last-child div{
+            position: absolute;
+            background: url("https://via.placeholder.com/700x400");
+            background-position: center;
+            width:100%;
+            height: 200px;
+            z-index: 2;
+            transition: width .3s .2s;
+        }
+
+        section:last-child figcaption{
+            position: absolute;
+            z-index: 1;
+            padding: 10px;
+            transition: margin-left .3s ;
+        }
+
+        section:last-child figure:hover div{
+            width: 50%;
+        }
+
+        section:last-child figure:hover figcaption{
+            margin-left: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <!-- section>article*3>(h2>lorem3)+(p>lorem30)+button>{lire la suite} -->
+        <section>
+            <article>
+                <div>
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, at. Impedit rem quod ea deleniti quos facere magni magnam fugit! Ipsum ad porro eius minus aut dolore non quo vitae.</p>
+                </div>
+              
+                <button>lire la suite</button>
+            </article>
+            <article>
+                <div>
+                    <h2>Accusantium, omnis optio.</h2>
+                    <p>Iusto, sapiente. Esse, eligendi laboriosam! Quaerat in libero ratione et quibusdam, officia quis, amet culpa, iure dolores perspiciatis excepturi? Autem quidem quod assumenda. Quod maxime laudantium harum quas veniam earum!</p>
+                </div>
+               
+                <button>lire la suite</button>
+            </article>
+            <article>
+               <div>
+                <h2>Adipisci, voluptate rerum?</h2>
+                <p>Necessitatibus aut, quae unde obcaecati sunt eveniet quos ipsam. Obcaecati officiis ea distinctio dolores magni id temporibus culpa similique deserunt, quam tenetur at quae debitis corporis dignissimos architecto asperiores amet?</p>
+               </div>
+                <button>lire la suite</button>
+            </article>
+        </section>
+        <!-- section>figure*2>img[src="https://via.placeholder.com/700x400"]+figcaption>lorem20 -->
+        <section>
+            <figure>
+                <div></div>
+                <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque vitae tempore quasi enim sint eius fugiat minima, animi eveniet tempora?</figcaption>
+            </figure>
+            <figure>
+                <div></div>
+                <figcaption>Maxime accusantium similique blanditiis culpa magni, eaque tempore itaque adipisci obcaecati inventore asperiores esse quo error sint ducimus cum animi.</figcaption>
+            </figure>
+        </section>
+    </div>
+</body>
+</html>
