@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* 
+css classique
+.a1{
+    width: 200px;
+}
+
+.a1 h2{
+    color:blue;
+}
+ */
+/*nesting = imbrication sélection dans un autre sélecteur + ne pas oublier indentation 
+plugun dans visual Prettier
+Fichier > Préférences > Paramètres > filtrage onsave > cocher Editor: Format On Save
+*/
+.a1 {
+  width: 200px;
+}
+.a1 h2 {
+  font-size: 20px;
+  color: blue;
+}
+.a1 p {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=03-nesting.css.map */
