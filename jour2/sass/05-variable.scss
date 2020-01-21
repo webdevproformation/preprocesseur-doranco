@@ -1,0 +1,29 @@
+@import "./variable"; /*en sass lorsque vous faites un import via @import
+pas besoin de mettre le _ devant le nom du fichier
+pas besoin de mettre l'extension à la fin du fichier  
+*/
+
+/*mise en forme*/
+
+.container {
+  margin: 0 auto;
+  width: $container;
+  display: grid;
+  grid-template-columns: $grille-default;
+  grid-gap: $grille-marge;
+}
+h2 {
+  font-size: $font-base * 2; /*pour les valeurs chiffrées => effectuer des calculs */
+  margin-bottom: $margin-default + 5px;
+  text-shadow: $ombre;
+}
+
+button {
+  font-size: $font-base * 0.8;
+  margin-top: $margin-default + 20px;
+}
+
+img {
+  border-radius: $default-radius;
+  box-shadow: $ombre;
+}

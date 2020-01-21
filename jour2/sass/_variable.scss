@@ -1,0 +1,25 @@
+/*sass/_variable.scss*/
+/*un ensemble de variable 
+google => color hunt => https://colorhunt.co/
+*/
+
+$couleur-principale: #192965;
+$couleur-secondaire: #bbcfff;
+
+/*bordure et ombrage*/
+
+$bordure: 1px solid $couleur-principale;
+$ombre: 2px 2px 3px $couleur-secondaire;
+
+/*dimensions */
+$container: 960px;
+
+/*grille*/
+$grille-default: repeat(2, 1fr);
+$grille-marge: 20px;
+$margin-default: 5px;
+
+/*font size*/
+$font-base: 16px;
+
+$default-radius: 5px;

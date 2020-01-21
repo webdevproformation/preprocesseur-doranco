@@ -1,3 +1,40 @@
+@charset "UTF-8";
+/*sass/_variable.scss*/
+/*un ensemble de variable 
+google => color hunt => https://colorhunt.co/
+*/
+/*bordure et ombrage*/
+/*dimensions */
+/*grille*/
+/*font size*/
+/*en sass lorsque vous faites un import via @import
+pas besoin de mettre le _ devant le nom du fichier
+pas besoin de mettre l'extension à la fin du fichier  
+*/
+/*mise en forme*/
+.container {
+  margin: 0 auto;
+  width: 960px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
 
+h2 {
+  font-size: 32px;
+  /*pour les valeurs chiffrées => effectuer des calculs */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 3px #bbcfff;
+}
+
+button {
+  font-size: 12.8px;
+  margin-top: 25px;
+}
+
+img {
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #bbcfff;
+}
 
 /*# sourceMappingURL=05-variable.css.map */
