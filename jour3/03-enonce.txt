@@ -1,0 +1,47 @@
+/*
+1/ créer un nouveau fichier sass/03-exo.scss
+2/ créer le fichier 03-exo.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/03-exo.scss ./03-exo.css
+le fichier html 03-exo.html contient 
+
+réaliser => https://getbootstrap.com/docs/4.0/examples/pricing/ partie centrale
+
+Titre
+les trois sections 
+
+pour le html
+    div class container // contient tout le design
+        header // contient l'entête
+            h1
+            p
+        section    // contient les 3 articles
+            article*3 
+                header // ent^te de l'article
+                    p
+                div  // corps de l'article 
+                    h2 => $0 / mo // contient le prix 
+                    ul
+                    button le 1er article class .btn-default // 
+                            les autres articles .btn-info => permet plus facilement
+                            de changer l'aspect des boutons 
+pour le scss
+    // partie 1 du fichier => 
+        variables pour les couleurs (au moins 4)
+        variables pour les tailles de police (au moins 4)
+
+        variable largeurs et marges 
+        variable pour les marges  (au moins 4)
+        variables pour la largeur du .container
+        variable pour la grille des articles 
+
+    // partie 2
+        @mixin
+        @import
+        @extend
+
+    // partie 2
+        mis en forme 
+
+
+*/
