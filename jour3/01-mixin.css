@@ -42,5 +42,34 @@ section:last-child {
     transform: translate(0, 0);
   }
 }
+/*
+1/ créer un nouveau fichier sass/02-exo.scss
+2/ créer le fichier 02-exo.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/02-exo.scss ./02-exo.css
+
+le fichier html contient 
+une section 
+    div
+        formulaire
+            div 
+                label + select
+                    option : France | Allemagne | Italie
+            div
+                label + input type texte
+            div
+                input type submit
+    address
+        iframe avec une google map 
+
+en scss 
+    faire apparaitre la div contenant le formulaire depuis à la gauche
+            en + avec changer la couleur fond de vert vers le blanc
+
+    faire apparaitre la div contenant l'iframe depuis la droite
+            en + changer la couleur de fond de rouge vers le blanc
+
+utiliser les variables / les mixin / l'imbrication (nesting)
+*/
 
 /*# sourceMappingURL=01-mixin.css.map */
