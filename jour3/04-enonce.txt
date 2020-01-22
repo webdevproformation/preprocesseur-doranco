@@ -1,0 +1,12 @@
+/*
+1/ créer un nouveau fichier sass/04-boucle-if.scss
+2/ créer le fichier 04-boucle-if.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/04-boucle-if.scss ./04-boucle-if.css
+
+@for 
+@each
+@if
+@else 
+
+*/

@@ -1,0 +1,80 @@
+// boucle
+@for $i from 1 through 4 {
+  //écrire ce que l'on veut
+  .btn#{$i} {
+    font-size: #{$i}px;
+  }
+
+  .grille-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
+  }
+
+  .marge-#{$i * 25} {
+    margin: $i * 0.25 * 100% 0;
+  }
+}
+
+// très pratique si vous avez des itérations
+// variable simple
+// stocker des tableaux dans une variable
+// si vous mettez des virgules entre les valeurs = tableau
+$pourcent: 0, 20, 40, 50;
+// très pratique si on a une ligne de nombre qui ne se suit pas
+
+@each $p in $pourcent {
+  .icon-size-#{$p} {
+    font-size: $p * 0.01 * 100%;
+  }
+}
+
+// tableau qui contient des tableaux
+
+$menu: (
+  "top": 10,
+  "left": 30,
+  "bottom": 20,
+  "right": 12
+);
+
+@each $position, $valeur in $menu {
+  .icon-#{$position} {
+    position: relative;
+    top: $valeur * 1px;
+  }
+}
+
+// exemple d'utilisation avec @if
+
+@for $i from 2 through 20 {
+  @if ($i%2 == 0) {
+    .ligne-#{$i} {
+      background-color: whitesmoke;
+    }
+  } @else {
+    .ligne-#{$i} {
+      background-color: darkorange;
+    }
+  }
+}
+
+@for $i from 1 through 100 {
+  p {
+    &:nth-child(#{$i}) {
+      transform: translate(2000px, 0);
+
+      animation: apparition
+        0.5s
+        ($i * 0.3s); // le 3ème paramètre est le delay = retard
+      animation-fill-mode: forwards;
+    }
+    &:before {
+      content: #{$i};
+    }
+  }
+}
+
+@keyframes apparition {
+  to {
+    transform: translate(0, 0);
+  }
+}
