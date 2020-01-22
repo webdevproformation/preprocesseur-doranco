@@ -1,0 +1,84 @@
+$container-width: 960px;
+
+$grille-2: repeat(2, 1fr);
+$grille-1: 1fr;
+$marge: 10px;
+
+@import "responsive";
+
+// cette règle garantie que l'iframe ne va pas dépasser de la colonne de la grille
+iframe {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+// la mise en forme
+
+.container {
+  margin: 0 auto;
+  width: $container-width;
+  @media #{$smartphone-portrait},#{$smartphone-paysage} ,#{$tablette-portrait} , #{$tablette-paysage} {
+    width: 100%;
+  }
+}
+section {
+  display: grid;
+  grid-template-columns: $grille-2;
+  align-items: center; // centrer verticalement (en hauteur) le formulaire
+  grid-gap: $marge + 20px;
+  & > div {
+    animation: apparition-gauche 2s;
+  }
+
+  address {
+    animation: apparition-droite 2s;
+  }
+
+  @media #{$smartphone-portrait},#{$smartphone-paysage} ,#{$tablette-portrait} {
+    grid-template-columns: $grille-1;
+  }
+}
+
+form div {
+  margin: $marge 0;
+  &:first-child {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-gap: $marge;
+  }
+  &:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-gap: $marge;
+  }
+  &:last-child {
+    display: grid;
+    justify-content: center; // centrer en horizontalement le bouton
+  }
+}
+
+@keyframes apparition-gauche {
+  from {
+    transform: translate(-1000px, 0);
+    background-color: chartreuse;
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    background-color: white;
+    opacity: 1;
+  }
+}
+
+@keyframes apparition-droite {
+  from {
+    transform: translate(1000px, 0);
+    background-color: steelblue;
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    background-color: white;
+    opacity: 1;
+  }
+}

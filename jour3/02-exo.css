@@ -1,0 +1,77 @@
+iframe {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+@media screen and (max-width:350px), screen and (min-width:351px) and (max-width:480px), screen and (min-width:481px) and (max-width:720px), screen and (min-width:721px) and (max-width:960px) {
+  .container {
+    width: 100%;
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 30px;
+}
+section > div {
+  animation: apparition-gauche 2s;
+}
+section address {
+  animation: apparition-droite 2s;
+}
+@media screen and (max-width:350px), screen and (min-width:351px) and (max-width:480px), screen and (min-width:481px) and (max-width:720px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+}
+
+form div {
+  margin: 10px 0;
+}
+form div:first-child {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: 10px;
+}
+form div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: 10px;
+}
+form div:last-child {
+  display: grid;
+  justify-content: center;
+}
+
+@keyframes apparition-gauche {
+  from {
+    transform: translate(-1000px, 0);
+    background-color: chartreuse;
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    background-color: white;
+    opacity: 1;
+  }
+}
+@keyframes apparition-droite {
+  from {
+    transform: translate(1000px, 0);
+    background-color: steelblue;
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    background-color: white;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=02-exo.css.map */
