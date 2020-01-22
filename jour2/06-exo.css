@@ -35,6 +35,12 @@ header nav ul {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width:350px) {
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+}
 header nav ul li {
   list-style: none;
 }

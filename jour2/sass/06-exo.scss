@@ -50,6 +50,10 @@ header {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    @media #{$smartphone-portrait} {
+      display: block;
+      text-align: center;
+    }
     li {
       list-style: none;
     }
