@@ -76,3 +76,17 @@ form div {
 
 @include apparition($sens: droite);
 @include apparition($sens: gauche, $valeur: -3000px);
+
+/*
+1/ créer un nouveau fichier sass/03-exo.scss
+2/ créer le fichier 03-exo.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/03-exo.scss ./03-exo.css
+le fichier html 03-exo.html contient 
+
+réaliser => https://getbootstrap.com/docs/4.0/examples/pricing/ partie centrale
+
+Titre
+les trois sections 
+
+*/
