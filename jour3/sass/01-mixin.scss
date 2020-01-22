@@ -1,0 +1,93 @@
+/*
+1/ créer un nouveau fichier sass/01-mixin.scss
+2/ créer le fichier 01-mixin.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ cd jour3
+4/ sass --watch ./sass/01-mixin.scss ./01-mixin.css
+*/
+
+// largeurs
+$container-width: 960px;
+
+// grille
+
+$grille-2: repeat(2, 1fr);
+$marge: 15px;
+
+// couleurs => google > color hunt
+
+$section-1-color: #6a8caf;
+$section-2-color: #a7e9af;
+
+// mixin
+@mixin apparition-v1 {
+  @keyframes apparition-droite {
+    from {
+      transform: translate(2000px, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@mixin apparition-v2 {
+  @keyframes apparition-gauche {
+    from {
+      transform: translate(-2000px, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@mixin apparition-finale($sens, $from) {
+  @keyframes apparition-#{$sens} {
+    from {
+      transform: translate($from, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@mixin apparition($sens, $from: 2000px) {
+  // masque de définition
+  @keyframes apparition-#{$sens} {
+    from {
+      transform: translate($from, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+// lancer la mise en forme
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}
+
+section {
+  display: grid;
+  grid-template-columns: $grille-2;
+  grid-gap: $marge;
+  margin: $marge 0;
+
+  &:first-child {
+    border: 1px solid $section-1-color;
+    animation: apparition-gauche 0.8s; // appel de la fonction
+  }
+
+  &:last-child {
+    border: 1px solid $section-2-color;
+    animation: apparition-droite 0.8s;
+  }
+}
+
+@include apparition("droite"); // définition de l'animation
+@include apparition("gauche", -200px);

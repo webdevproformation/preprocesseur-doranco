@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*
+1/ créer un nouveau fichier sass/01-mixin.scss
+2/ créer le fichier 01-mixin.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ cd jour3
+4/ sass --watch ./sass/01-mixin.scss ./01-mixin.css
+*/
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  margin: 15px 0;
+}
+section:first-child {
+  border: 1px solid #6a8caf;
+  animation: apparition-gauche 0.8s;
+}
+section:last-child {
+  border: 1px solid #a7e9af;
+  animation: apparition-droite 0.8s;
+}
+
+@keyframes apparition-droite {
+  from {
+    transform: translate(2000px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes apparition-gauche {
+  from {
+    transform: translate(-200px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+/*# sourceMappingURL=01-mixin.css.map */
