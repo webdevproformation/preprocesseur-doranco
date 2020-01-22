@@ -72,6 +72,7 @@ section article ul li {
 .entete {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .entete ul {
   width: 30%;
