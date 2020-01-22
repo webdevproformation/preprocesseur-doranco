@@ -1,0 +1,108 @@
+// ici le sccs pour l'exo 3
+
+// variable de couleur
+// firefox (uniquement) dispose d'un outil pipette => récupérer la couleur exacte d'un élément d'une page web
+$gris: rgb(136, 132, 132);
+$gris-fonce: rgb(26, 25, 25);
+$gris-clair: rgb(160, 158, 158);
+$gris-tres-clair: rgb(216, 216, 216);
+$bleu: rgb(50, 143, 248);
+$bleu-fonce: rgb(70, 50, 248);
+$blanc: white;
+
+// polices
+
+$base: 16px; // => par défaut la taille d'une balise p = 16px
+$base-sm: $base * 0.8;
+$base-xm: $base * 0.5;
+$base-xl: $base * 2;
+$base-xxl: $base * 4;
+
+// largeurs et les marges / rayon
+
+$container-width: 720px; // => à partir de 960px écran est celui d'un ordinateur
+$marge: 15px;
+$marge-sm: $marge * 0.5;
+$marge-xl: $marge * 2;
+$rayon: 5px;
+
+// grille
+$grille-3: repeat(3, 1fr);
+
+// centrer notre travail dans le navigateur
+// appliquer une police par défaut pour tous éléments html enfant + aligner au centre tous les textes
+.container {
+  margin: 0 auto;
+  width: $container-width;
+  text-align: center; // permettre de centrer tous les textes
+  // la balise avec la class container est le parent de toutes autres balises
+  // => hérité de cette propriété
+  font-family: Arial; // impacter toutes les balises => changer leur font
+}
+
+//entête du site
+
+header {
+  h1 {
+    font-size: $base-xl;
+    margin-bottom: $marge-xl;
+    color: $gris-fonce;
+  }
+  p {
+    font-size: $base;
+    color: $gris-fonce;
+  }
+}
+section {
+  display: grid;
+  grid-template-columns: $grille-3;
+  grid-gap: $marge;
+
+  article {
+    border-radius: $rayon;
+    border: 1px solid $gris;
+    header {
+      background-color: $gris-tres-clair;
+      border-bottom: 1px solid $gris;
+      p {
+        margin: 0;
+        padding: $marge 0;
+        font-size: $base * 1.4;
+      }
+    }
+    h2 {
+      margin: $marge-sm 0;
+    }
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        margin: 0 $marge-sm;
+        font-size: $base-sm;
+      }
+    }
+  }
+}
+.btn-default {
+  padding: $marge-sm $marge-xl * 1.5;
+  margin-bottom: $marge-sm;
+  background-color: white;
+  border: 1px solid $bleu;
+  border-radius: $rayon;
+  font-size: $base * 1.3;
+  transition: background-color 0.5s;
+  cursor: pointer;
+  &:hover {
+    background-color: $bleu;
+    color: $blanc;
+    border: 1px solid $blanc;
+  }
+}
+.btn-info {
+  @extend .btn-default;
+  background-color: $bleu;
+  color: white;
+  &:hover {
+    background-color: $bleu-fonce;
+  }
+}

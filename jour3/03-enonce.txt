@@ -7,9 +7,6 @@ le fichier html 03-exo.html contient
 
 réaliser => https://getbootstrap.com/docs/4.0/examples/pricing/ partie centrale
 
-Titre
-les trois sections 
-
 pour le html
     div class container // contient tout le design
         header // contient l'entête
@@ -17,10 +14,10 @@ pour le html
             p
         section    // contient les 3 articles
             article*3 
-                header // ent^te de l'article
+                header // entête de l'article
                     p
                 div  // corps de l'article 
-                    h2 => $0 / mo // contient le prix 
+                    h2 => $0 <small>/ mo</small> // contient le prix 
                     ul
                     button le 1er article class .btn-default // 
                             les autres articles .btn-info => permet plus facilement

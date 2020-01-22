@@ -1,0 +1,72 @@
+.container {
+  margin: 0 auto;
+  width: 720px;
+  text-align: center;
+  font-family: Arial;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1a1919;
+}
+header p {
+  font-size: 16px;
+  color: #1a1919;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+section article {
+  border-radius: 5px;
+  border: 1px solid #888484;
+}
+section article header {
+  background-color: #d8d8d8;
+  border-bottom: 1px solid #888484;
+}
+section article header p {
+  margin: 0;
+  padding: 15px 0;
+  font-size: 22.4px;
+}
+section article h2 {
+  margin: 7.5px 0;
+}
+section article ul {
+  padding: 0;
+}
+section article ul li {
+  list-style: none;
+  margin: 0 7.5px;
+  font-size: 12.8px;
+}
+
+.btn-default, .btn-info {
+  padding: 7.5px 45px;
+  margin-bottom: 7.5px;
+  background-color: white;
+  border: 1px solid #328ff8;
+  border-radius: 5px;
+  font-size: 20.8px;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+.btn-default:hover, .btn-info:hover {
+  background-color: #328ff8;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-info {
+  background-color: #328ff8;
+  color: white;
+}
+.btn-info:hover {
+  background-color: #4632f8;
+}
+
+/*# sourceMappingURL=03-exo.css.map */
