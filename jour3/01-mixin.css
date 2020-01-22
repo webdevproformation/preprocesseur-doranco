@@ -47,22 +47,24 @@ section:last-child {
 2/ créer le fichier 02-exo.html
 3/ arrêter l'ancienne commande Ctrl + C
 4/ sass --watch ./sass/02-exo.scss ./02-exo.css
-
-le fichier html contient 
-une section 
-    div
-        formulaire
-            div 
-                label + select
-                    option : France | Allemagne | Italie
-            div
-                label + input type texte
-            div
-                input type submit
-    address
-        iframe avec une google map 
+le fichier html 02-exo.html contient 
+.container
+    une section 
+        div
+            formulaire
+                div 
+                    label + select
+                        option : France | Allemagne | Italie
+                div
+                    label + input type texte
+                div
+                    input type submit
+        address
+            iframe avec une google map 
 
 en scss 
+    .container est responsive
+    la section est une grille de deux colonnes  | si l'écran attent 720px grille 1 colonne
     faire apparaitre la div contenant le formulaire depuis à la gauche
             en + avec changer la couleur fond de vert vers le blanc
 
