@@ -69,4 +69,28 @@ section article ul li {
   background-color: #4632f8;
 }
 
+.entete {
+  display: flex;
+  justify-content: space-between;
+}
+.entete ul {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.entete ul li {
+  list-style: none;
+  margin: 0 7.5px;
+}
+.entete ul li a {
+  text-decoration: none;
+  color: #888484;
+}
+.entete ul li:last-child {
+  border: 1px solid #328ff8;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 /*# sourceMappingURL=03-exo.css.map */
