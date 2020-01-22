@@ -49,9 +49,9 @@ form div:last-child {
   justify-content: center;
 }
 
-@keyframes apparition-gauche {
+@keyframes apparition-droite {
   from {
-    transform: translate(-1000px, 0);
+    transform: translate(1000px, 0);
     background-color: chartreuse;
     opacity: 0;
   }
@@ -61,10 +61,10 @@ form div:last-child {
     opacity: 1;
   }
 }
-@keyframes apparition-droite {
+@keyframes apparition-gauche {
   from {
-    transform: translate(1000px, 0);
-    background-color: steelblue;
+    transform: translate(-3000px, 0);
+    background-color: chartreuse;
     opacity: 0;
   }
   to {

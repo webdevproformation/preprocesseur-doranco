@@ -4,6 +4,21 @@ $grille-2: repeat(2, 1fr);
 $grille-1: 1fr;
 $marge: 10px;
 
+@mixin apparition($sens, $valeur: 1000px, $couleur-depart: chartreuse) {
+  @keyframes apparition-#{$sens} {
+    from {
+      transform: translate($valeur, 0);
+      background-color: $couleur-depart;
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      background-color: white;
+      opacity: 1;
+    }
+  }
+}
+
 @import "responsive";
 
 // cette règle garantie que l'iframe ne va pas dépasser de la colonne de la grille
@@ -57,28 +72,5 @@ form div {
   }
 }
 
-@keyframes apparition-gauche {
-  from {
-    transform: translate(-1000px, 0);
-    background-color: chartreuse;
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    background-color: white;
-    opacity: 1;
-  }
-}
-
-@keyframes apparition-droite {
-  from {
-    transform: translate(1000px, 0);
-    background-color: steelblue;
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    background-color: white;
-    opacity: 1;
-  }
-}
+@include apparition($sens: droite);
+@include apparition($sens: gauche, $valeur: -3000px);
