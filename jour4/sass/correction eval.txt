@@ -1,0 +1,81 @@
+01
+
+réponse B
+
+02 -------------------------------------
+
+réponse A
+
+03 -------------------------------------
+
+$fruits :  banane, cerise, ananas , pomme ;
+$fruits :  "banane", "cerise", "ananas" , "pomme" ;
+
+04 -------------------------------------
+
+@each $f in $fruits{
+  .fruit-#{$f}{
+    width:50%
+  }
+}
+
+05 -------------------------------------
+
+$villes : Lyon, Paris, Marseille, Rouen , Bourg en Bresse ;
+$villes : "Lyon", "Paris", "Marseille", "Rouen" , "Bourg en Bresse" ;
+
+06 -------------------------------------
+
+$villes : (lyon:"Lyon", paris:"Paris", marseille:"Marseille", rouen:"Rouen" , bourg-de-peage:"Bourg en Bresse") ;
+
+@each $v , $V in $villes{
+  .ville-#{$v}::before {
+      display: block;
+      content: $V;
+  }
+}
+
+07 -------------------------------------
+
+@mixin generateVille($v, $V , $position ){
+  @if($position == "b"){
+    .ville-#{$v}::before {
+        display: block;
+        content: $V;
+    }
+  }@else{
+     .ville-#{$v}::after {
+          display: block;
+          content: $V;
+      }
+  }
+}
+@each $v , $V in $villes{
+ @include generateVille($v, $V , "b" )
+}
+
+08 -------------------------------------
+
+@mixin centrer{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+09 -------------------------------------
+
+@for $i from 1 through 4{
+  .col-#{$i} {
+      width: $i *0.25 * 100% ;
+  }
+}
+
+10 -------------------------------------
+
+@mixin generateCol($nb-col){
+  @for $i from 1 through $nb-col{
+    .col-#{$i} {
+        width: $i *0.25 * 100% ;
+    }
+  }
+}
