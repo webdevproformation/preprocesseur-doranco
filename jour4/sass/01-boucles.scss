@@ -89,3 +89,38 @@ $notes-musique: do 10 30, re 30 40, mi 60 22;
 // font awesome
 // si le 01-boucle.html
 // ajouter ajouter css et font-awesome
+
+.fa-credit-card-alt {
+  color: darksalmon;
+  font-size: 30px;
+}
+
+$list: fa-cog 10 30 25 20, fa-crop 30 20 15 60, fa-download 60 80 22 15,
+  fa-music 120 80 22 32;
+
+.musique {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: darksalmon;
+
+  @each $item in $list {
+    .#{nth($item , 1)} {
+      position: absolute;
+      top: nth($item, 2) * 1px;
+      left: nth($item, 3) * 1px;
+      font-size: nth($item, 4) * 1px;
+      opacity: 0;
+      animation: #{nth($item, 1)} 0.8s infinite;
+    }
+  }
+}
+
+@each $item in $list {
+  @keyframes #{nth($item , 1)} {
+    to {
+      transform: translate(0, nth($item, 4) * -1px);
+      opacity: 1;
+    }
+  }
+}

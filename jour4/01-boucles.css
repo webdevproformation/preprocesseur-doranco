@@ -100,4 +100,73 @@
   left: 22px;
 }
 
+.fa-credit-card-alt {
+  color: darksalmon;
+  font-size: 30px;
+}
+
+.musique {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: darksalmon;
+}
+.musique .fa-cog {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 25px;
+  opacity: 0;
+  animation: fa-cog 0.8s infinite;
+}
+.musique .fa-crop {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  font-size: 15px;
+  opacity: 0;
+  animation: fa-crop 0.8s infinite;
+}
+.musique .fa-download {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  font-size: 22px;
+  opacity: 0;
+  animation: fa-download 0.8s infinite;
+}
+.musique .fa-music {
+  position: absolute;
+  top: 120px;
+  left: 80px;
+  font-size: 22px;
+  opacity: 0;
+  animation: fa-music 0.8s infinite;
+}
+
+@keyframes fa-cog {
+  to {
+    transform: translate(0, -25px);
+    opacity: 1;
+  }
+}
+@keyframes fa-crop {
+  to {
+    transform: translate(0, -15px);
+    opacity: 1;
+  }
+}
+@keyframes fa-download {
+  to {
+    transform: translate(0, -22px);
+    opacity: 1;
+  }
+}
+@keyframes fa-music {
+  to {
+    transform: translate(0, -22px);
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=01-boucles.css.map */
