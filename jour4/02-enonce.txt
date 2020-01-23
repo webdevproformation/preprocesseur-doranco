@@ -1,6 +1,4 @@
-Réaliser le design 
-
-disponible à la page suivant : https://getbootstrap.com/docs/4.0/examples/offcanvas/
+Réaliser le design disponible à l'adresse suivante : https://getbootstrap.com/docs/4.0/examples/offcanvas/
 
 utiliser tous les concepts sass vus en cours :
 
