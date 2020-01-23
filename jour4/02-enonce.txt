@@ -1,0 +1,19 @@
+Réaliser le design 
+
+disponible à la page suivant : https://getbootstrap.com/docs/4.0/examples/offcanvas/
+
+utiliser tous les concepts sass vus en cours :
+
+- variables : simple / liste / tableau de liste
+- mixin
+- boucle
+- héritage
+
+utiliser font-awesome pour les petits icônes (carets - triangle)
+
+1/ créer un nouveau fichier sass/02-exo.scss
+2/ créer le fichier 02-exo.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/02-exo.scss ./02-exo.css
+le fichier html 02-exo.html contient 
+
