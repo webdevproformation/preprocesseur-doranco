@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="./02-exo.css" />
+  </head>
+  <body>
+    <header class="entete">
+      <nav>
+        <div>
+          <div class="logo">Logo</div>
+          <ul class="menu">
+            <li class="active"><a href="#">Lorem.</a></li>
+            <li><a href="#">Error.</a></li>
+            <li><a href="#">Dolorum!</a></li>
+            <li class="with-sous-menu">
+              <a href="#"
+                >Possimus. <i class="fa fa-caret-down" aria-hidden="true"></i
+              ></a>
+              <ul class="sous-menu style" id="sous-menu">
+                <li><a href="#">Lorem.</a></li>
+                <li><a href="#">Optio.</a></li>
+                <li><a href="#">Error?</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <form action="">
+          <input type="text" placeholder="search" />
+          <input type="submit" value="search" />
+        </form>
+      </nav>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">Lorem.</a></li>
+          <li><a href="#">Error.</a></li>
+          <li><a href="#">Dolorum!</a></li>
+          <li><a href="#">Possimus.</a></li>
+          <li><a href="#">Possimus.</a></li>
+          <li><a href="#">Possimus.</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <header>
+        <img src="https://via.placeholder.com/50" alt="" />
+        <h1>
+          Bootstrap <br />
+          <small> Since 2011</small>
+        </h1>
+      </header>
+      <section>
+        <h2>Lorem, ipsum dolor.</h2>
+        <!-- article*3>img+ul>li*2>lorem10 -->
+        <article>
+          <img src="https://via.placeholder.com/20" alt="" />
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis, velit!
+            </li>
+            <li>
+              Quos esse sunt delectus distinctio in ipsam obcaecati laudantium!
+              Amet?
+            </li>
+          </ul>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/20" alt="" />
+          <ul>
+            <li>
+              Odit culpa labore perspiciatis ad nulla possimus! Provident, sint
+              vel!
+            </li>
+            <li>
+              Explicabo minus obcaecati ea impedit ducimus dicta maxime amet
+              quasi!
+            </li>
+          </ul>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/20" alt="" />
+          <ul>
+            <li>
+              Praesentium quisquam ex numquam reiciendis ratione vitae facilis
+              fugit dolor?
+            </li>
+            <li>
+              Excepturi eos molestias, dolorem reprehenderit illo nostrum
+              ducimus debitis odit!
+            </li>
+          </ul>
+        </article>
+        <div>
+          <a href="#">lire la suite ...</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section>
+        <h2>Lorem, ipsum dolor.</h2>
+        <!-- article*3>img+ul>li*2>lorem10 -->
+        <article class="trois">
+          <img src="https://via.placeholder.com/20" alt="" />
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis, velit!
+            </li>
+            <li>
+              Quos esse sunt delectus distinctio in ipsam obcaecati laudantium!
+              Amet?
+            </li>
+          </ul>
+          <div>
+            <a href="#">lien <br /><br /></a>
+          </div>
+        </article>
+        <article class="trois">
+          <img src="https://via.placeholder.com/20" alt="" />
+          <ul>
+            <li>
+              Odit culpa labore perspiciatis ad nulla possimus! Provident, sint
+              vel!
+            </li>
+            <li>
+              Explicabo minus obcaecati ea impedit ducimus dicta maxime amet
+              quasi!
+            </li>
+          </ul>
+          <div>
+            <a href="#">lien <br /><br /></a>
+          </div>
+        </article>
+        <article class="trois">
+          <img src="https://via.placeholder.com/20" alt="" />
+          <ul>
+            <li>
+              Praesentium quisquam ex numquam reiciendis ratione vitae facilis
+              fugit dolor?
+            </li>
+            <li>
+              Excepturi eos molestias, dolorem reprehenderit illo nostrum
+              ducimus debitis odit!
+            </li>
+          </ul>
+          <div>
+            <a href="#">lien <br /><br /></a>
+          </div>
+        </article>
+        <div>
+          <a href="#">lire la suite ...</a>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      document
+        .querySelector(".with-sous-menu")
+        .addEventListener("click", function() {
+          document.querySelector("#sous-menu").classList.toggle("sous-menu");
+        });
+    </script>
+  </body>
+</html>
