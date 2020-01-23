@@ -1,0 +1,91 @@
+/*
+0/ créer le dossier jour4
+1/ créer un nouveau fichier sass/01-boucles.scss
+2/ créer le fichier 01-boucles.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/01-boucles.scss ./01-boucles.css
+*/
+
+// les tableaux et les boucles
+
+$couleur: red;
+
+// liste => ne pas oublier la virgule
+$list-couleur: red, blue, green, orange, pink;
+
+@each $c in $list-couleur {
+  .item-#{$c} {
+    background: $c;
+  }
+}
+
+// tableau dont chaque élément est un tableau
+// les parenthèses et valeur : valeur
+// pas de soucis pour écrire js ou "js"
+$categories: (
+  js: red,
+  php: green,
+  ajax: blue
+);
+
+@each $c, $couleur in $categories {
+  .categorie-#{$c} {
+    color: $couleur;
+  }
+}
+
+$autres-categories: (
+  symfony: red,
+  "drupal": green,
+  "wordpress": blue
+);
+
+@each $c, $couleur in $autres-categories {
+  .categorie-#{$c} {
+    border: 1px solid $couleur;
+  }
+}
+
+// cas pratique
+// créer une boucle qui va générer le code css suivant :
+
+.icon-1 {
+  margin: 0 20%;
+}
+.icon-2 {
+  margin: 0 40%;
+}
+.icon-4 {
+  margin: 0 60%;
+}
+.icon-5 {
+  margin: 0 80%;
+}
+
+$list-icones: (
+  1: 20%,
+  2: 40%,
+  4: 60%,
+  5: 80%
+);
+
+@each $index, $poucent in $list-icones {
+  .icon-#{$index} {
+    margin: 0 $poucent;
+  }
+}
+
+$notes-musique: do 10 30, re 30 40, mi 60 22;
+
+@each $note in $notes-musique {
+  .#{nth($note,1)} {
+    position: relative;
+    top: nth($note, 2) * 1px;
+    left: nth($note, 3) * 1px;
+  }
+}
+
+//------------------
+// font awesome
+// si le 01-boucle.html
+// ajouter ajouter css et font-awesome
