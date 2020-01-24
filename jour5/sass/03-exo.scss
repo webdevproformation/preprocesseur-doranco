@@ -7,7 +7,8 @@ $marge: 30px;
 $marge-sm: 15px;
 
 @mixin placeholder($color, $font-size) {
-  &::-webkit-input-placeholder {
+  &::-webkit-input-placeholder { // :hover => pseudo sélecteur lorsque l'on passela souris
+    // pour certain vieux navigateur ::hover => même chose (ancienne norme pour les pseudo sélecteurs)
     // Chrome/Opera/Safari
     color: $color;
     font-size: $font-size;
@@ -91,9 +92,9 @@ header {
 
 .contact {
   display: grid;
-  grid-template-columns: 2.8fr 1.8fr;
+  grid-template-columns: 2.8fr 1.8fr; // repeat(2, 1fr) // 2fr 1fr
   grid-gap: $marge;
-  align-items: flex-start;
+  align-items: flex-start; // éviter que les input soient strechés étirés
   form {
     display: grid;
     grid-gap: $marge;
@@ -104,7 +105,7 @@ header {
     @include placeholder($gris-fonce, 12px);
     @include effet-focus($gris);
   }
-  form > label {
+  form > label { // spécialement pour le champ checkbox 
     font-family: serif;
     font-weight: bold;
   }
@@ -121,7 +122,7 @@ header {
   }
   form .submit {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; // caler le bouton à droite 
     margin-top: $marge * 2;
     input {
       padding: $marge-sm $marge + 10px;
