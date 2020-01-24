@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="02-exo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cards</h1>
+      <div class="sort">
+        <div class="sort__results">24 resultats</div>
+        <form>
+          <label for="classement">Sort By :</label>
+          <select name="" id="classement">
+            <option value="1">Ordre Alphabétique A-Z</option>
+            <option value="2">Prix Décroissant</option>
+            <option value="3">Prix Croissant</option>
+          </select>
+        </form>
+      </div>
+      <section class="produits">
+        <!-- article*3>(figure>img[src="https://via.placeholder.com/320x250"])+div.produit__details>(h2>lorem3)+p>{£ 12.60} -->
+        <article>
+          <figure>
+            <img
+              src="https://via.placeholder.com/320x250?text=produit1"
+              alt=""
+            />
+          </figure>
+          <div class="produit__details">
+            <h2 class="produit__nom">Lorem, ipsum dolor.</h2>
+            <p class="produit__prix">£ 12.60</p>
+          </div>
+        </article>
+        <article>
+          <figure>
+            <img
+              src="https://via.placeholder.com/320x250?text=produit2"
+              alt=""
+            />
+          </figure>
+          <div class="produit__details">
+            <h2 class="produit__nom">Harum, eius possimus.</h2>
+            <p class="produit__prix">£ 12.60</p>
+          </div>
+        </article>
+        <article>
+          <figure>
+            <img
+              src="https://via.placeholder.com/320x250?text=produit3"
+              alt=""
+            />
+          </figure>
+          <div class="produit__details">
+            <h2 class="produit__nom">Commodi, ea id.</h2>
+            <p class="produit__prix">£ 12.60</p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

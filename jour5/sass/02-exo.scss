@@ -1,0 +1,82 @@
+$noir: #472247;
+$mauve: #85556d;
+$couleur-prix: #222222;
+
+$container-width: 960px;
+$marge: 20px;
+
+@mixin nop-nom {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin no-apparence-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+  font-family: Arial;
+}
+
+figure {
+  @include nop-nom();
+}
+img {
+  max-width: 100%;
+}
+
+h1 {
+  color: $noir;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.sort {
+  margin: $marge + 10px 0 $marge - 5px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.6rem;
+  form {
+    margin-left: $marge;
+    display: flex;
+    align-items: center;
+    label {
+      color: $mauve;
+    }
+    select {
+      margin-left: $marge;
+      padding: 10px 60px 10px 10px;
+      border: 1px solid #c7c7c7;
+      @include no-apparence-select();
+      background: url("https://i.ibb.co/b7xjLrB/selectbox-arrow.png") right
+        center no-repeat;
+    }
+  }
+}
+
+.produits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $marge;
+}
+
+.produit__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: darken($mauve, 20%);
+  .produit__nom {
+    font-weight: normal;
+    font-size: 0.6rem;
+  }
+  .produit__prix {
+    color: $couleur-prix;
+    font-size: 0.6rem;
+  }
+}

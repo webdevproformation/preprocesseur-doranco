@@ -1,4 +1,4 @@
 créer le fichier 01-exo.html
 créer le dossier sass/01-exo.scss 
-lancer la commande sass --watch ./sass/01-exo.scss  ./01-exo.css 
+lancer la commande sass --watch ./sass/01-exo1.scss  ./01-exo1.css 
 et réaliser le design cas n°1.png
