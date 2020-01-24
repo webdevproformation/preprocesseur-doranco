@@ -1,0 +1,66 @@
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.onglets {
+  font-family: Arial;
+  width: 300px;
+}
+.onglets header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+.onglets header div {
+  padding: 4px;
+  background-color: #e2e2e2;
+  color: #aaaaaa;
+}
+.onglets header span {
+  font-size: 0.85rem;
+}
+.onglets header div.actif {
+  background-color: #0061b7;
+  color: white;
+}
+.onglets header div:first-child {
+  border-right: 1px solid white;
+  border-top-left-radius: 5px;
+}
+.onglets header div:last-child {
+  border-left: 1px solid white;
+  border-top-right-radius: 5px;
+}
+.onglets div.body {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.onglets div.body section {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  align-items: center;
+  border-top: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+}
+.onglets div.body p {
+  margin: 8px 0;
+}
+.onglets div.body section:last-child {
+  border-bottom: 1px solid #dddddd;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.onglets div.body section figure {
+  margin: 8px;
+}
+.onglets div.body section i {
+  color: #ff6c00;
+}
+
+/*# sourceMappingURL=01-exo1.css.map */

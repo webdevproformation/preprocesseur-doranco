@@ -1,0 +1,82 @@
+$bleu: #0061b7;
+$gris: #e2e2e2;
+$gris-clair: #dddddd;
+$gris-fonce: #aaaaaa;
+$orange: #ff6c00;
+
+$width: 300px;
+$rayon: 5px;
+$marge: 8px;
+
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.onglets {
+  font-family: Arial;
+  width: 300px;
+  header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+  header div {
+    padding: $marge/2;
+    background-color: $gris;
+    color: $gris-fonce;
+  }
+  header span {
+    font-size: 0.85rem;
+  }
+  header div.actif {
+    background-color: $bleu;
+    color: white;
+  }
+  header div:first-child {
+    border-right: 1px solid white;
+    border-top-left-radius: $rayon;
+  }
+
+  header div:last-child {
+    border-left: 1px solid white;
+    border-top-right-radius: $rayon;
+  }
+
+  // pour le corps des onglets
+
+  div.body {
+    border-bottom-left-radius: $rayon;
+    border-bottom-right-radius: $rayon;
+  }
+
+  div.body section {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    border-top: 1px solid $gris-clair;
+    border-right: 1px solid $gris-clair;
+    border-left: 1px solid $gris-clair;
+  }
+  div.body p {
+    margin: $marge 0;
+  }
+
+  div.body section:last-child {
+    border-bottom: 1px solid $gris-clair;
+    border-bottom-right-radius: $rayon;
+    border-bottom-left-radius: $rayon;
+  }
+
+  div.body section figure {
+    margin: $marge;
+  }
+
+  div.body section i {
+    color: $orange;
+  }
+}
