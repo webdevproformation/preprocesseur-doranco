@@ -1,0 +1,123 @@
+ul {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1020px;
+}
+
+.entete nav:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.entete nav:first-child .zone1 {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.entete nav:first-child .zone1 form input[type=submit] {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #543385;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  padding: 12px 23px;
+}
+.entete nav:last-child ul {
+  display: flex;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.tools h2 {
+  grid-column: 1/-1;
+  font-size: 2rem;
+}
+.tools article {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 2px 2px 10px #cccccc;
+}
+.tools article .fa {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  color: #999999;
+}
+.tools article h3 {
+  color: #007fad;
+  font-size: 1.5rem;
+}
+.tools article p {
+  font-size: 0.9rem;
+  color: gray;
+}
+.tools article a {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #007d91;
+  color: white;
+  border-radius: 30px;
+}
+
+.app {
+  background: #543385;
+  color: white;
+  padding: 30px 15px;
+}
+.app .main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+.app .main.container {
+  width: 960px;
+}
+.app .main > figure {
+  text-align: center;
+}
+.app .main .app__infos h2 {
+  font-size: 1.9rem;
+}
+.app .main .app__infos p {
+  font-size: 0.9rem;
+  margin-bottom: 36px;
+}
+.app .main .app__infos img {
+  border-radius: 5px;
+}
+
+.partenaires {
+  text-align: center;
+  margin: 60px 0;
+}
+.partenaires h2 {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=04-exo.css.map */
