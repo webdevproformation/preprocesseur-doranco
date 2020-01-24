@@ -1,0 +1,162 @@
+$noir: #050100;
+$gris-clair: #f1f1f1;
+$gris: #777873;
+$gris-fonce: darken($noir, 90%);
+
+$marge: 30px;
+$marge-sm: 15px;
+
+@mixin placeholder($color, $font-size) {
+  &::-webkit-input-placeholder {
+    // Chrome/Opera/Safari
+    color: $color;
+    font-size: $font-size;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial;
+  }
+  &::-moz-placeholder {
+    // Firefox 19+
+    color: $color;
+    font-size: $font-size;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial;
+  }
+  &:-ms-input-placeholder {
+    // IE 10+
+    color: $color;
+    font-size: $font-size;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial;
+  }
+  &:-moz-placeholder {
+    // Firefox 18-
+    color: $color;
+    font-size: $font-size;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial;
+  }
+  &::placeholder {
+    color: $color;
+    font-size: $font-size;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial;
+  }
+}
+
+@mixin effet-focus($couleur) {
+  transition: border 1.5s;
+  &:focus {
+    border: 2px solid $couleur;
+  }
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  font-family: Arial;
+}
+
+iframe {
+  max-width: 100% !important;
+  height: 250px !important;
+}
+
+header {
+  margin-bottom: $marge-sm * 4;
+  text-align: center;
+  h2 {
+    font-family: serif;
+    letter-spacing: 2px;
+    font-size: 1.75rem;
+  }
+  p {
+    color: $gris;
+    text-transform: uppercase;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: $marge * 1.5;
+    font-size: 0.7rem;
+  }
+  hr {
+    width: 25px;
+    margin: 0 auto;
+    border-top: 3px solid $noir;
+  }
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 2.8fr 1.8fr;
+  grid-gap: $marge;
+  align-items: flex-start;
+  form {
+    display: grid;
+    grid-gap: $marge;
+  }
+  form > input[type="text"] {
+    padding: $marge-sm;
+    border: 2px solid $gris-clair;
+    @include placeholder($gris-fonce, 12px);
+    @include effet-focus($gris);
+  }
+  form > label {
+    font-family: serif;
+    font-weight: bold;
+  }
+  form > textarea {
+    padding: $marge-sm;
+    border: 2px solid $gris-clair;
+    height: $marge * 6;
+    @include placeholder($gris-fonce, 12px);
+    @include effet-focus($gris);
+  }
+  form .test {
+    text-align: center;
+    margin: $marge-sm 0;
+  }
+  form .submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $marge * 2;
+    input {
+      padding: $marge-sm $marge + 10px;
+      background: white;
+      border: 2px solid $noir;
+      font-size: 0.8em;
+      cursor: pointer;
+      transition: background 0.5s;
+      &:hover {
+        background: $noir;
+        color: white;
+      }
+    }
+  }
+}
+
+.widget {
+  font-size: 0.75rem;
+  text-align: justify;
+  color: $gris;
+  h3 {
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: bolder;
+    color: $noir;
+    margin: $marge - 3px 0;
+  }
+  &:first-child h3 {
+    margin-top: 0;
+  }
+
+  ul {
+    padding: 0;
+  }
+  ul > li {
+    list-style: none;
+  }
+}

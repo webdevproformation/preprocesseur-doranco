@@ -1,0 +1,6 @@
+créer le fichier 04-exo.html
+créer le dossier sass/04-exo.scss 
+lancer la commande sass --watch ./sass/04-exo.scss  ./04-exo.css 
+et réaliser le design "cas n°4.png"
+
+Bon travail !
