@@ -5,6 +5,11 @@ $couleur-prix: #222222;
 $container-width: 960px;
 $marge: 20px;
 
+// 1ère action = créer la mixin
+// @mixin nom-que-tu-veux{
+// color : red;
+// background : blue;
+// }
 @mixin nop-nom {
   margin: 0;
   padding: 0;
@@ -24,6 +29,8 @@ $marge: 20px;
 
 figure {
   @include nop-nom();
+  // utiliser la mixin 
+  // @include nom-que-tu-veux();
 }
 img {
   max-width: 100%;
