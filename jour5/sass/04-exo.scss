@@ -2,6 +2,7 @@ $bleu: #007fad;
 $turquoise: #007d91;
 $gris: #cccccc;
 $mauve: #543385;
+$bleu-pale: #f5f5f5;
 
 $container-width: 960px;
 $rayon: 5px;
@@ -18,11 +19,28 @@ $marge: 30px;
   background-color: $bg-color;
   color: white;
   border-radius: $rayon * 6;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($bg-color, 8%);
+  }
 }
 
 ul {
-  padding: 0;
+  @include nop-nom();
 }
+
+li {
+  list-style: none;
+}
+
+figure {
+  @include nop-nom();
+}
+a {
+  text-decoration: none;
+}
+
+//mis en forme !
 
 body {
   @include nop-nom();
@@ -35,35 +53,77 @@ body {
 }
 
 .entete {
+  nav {
+    padding: $marge / 3;
+  }
   nav:first-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .zone1 {
-      width: 40%;
+
+    form {
+      width: 540px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      color: lighten($mauve, 20px);
     }
 
-    .zone1 form input[type="submit"] {
+    form input[type="submit"] {
       @include btn($mauve);
       border: none;
       padding: $marge - 18px $marge - 7px;
     }
+    form input[type="text"] {
+      padding: $marge - 18px $marge - 7px;
+      border: none;
+      border-radius: $rayon;
+    }
+
+    form span {
+      display: flex;
+      align-items: center;
+      border: 1px solid black;
+      border-radius: $rayon;
+    }
+    form .fa {
+      font-size: 1.2rem;
+      margin: 0 0 0 10px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+    }
+    li:first-child {
+      margin-left: 0;
+    }
+    li {
+      margin-left: $marge;
+    }
+
+    li a {
+      color: black;
+      font-size: 0.9rem;
+    }
   }
   nav:last-child {
+    background-color: $bleu-pale;
     ul {
       display: flex;
     }
+    li {
+      margin-right: $marge;
+      a {
+        color: black;
+        font-size: 0.8rem;
+        &:hover {
+          color: $bleu;
+        }
+      }
+    }
   }
-}
-
-figure {
-  @include nop-nom();
-}
-a {
-  text-decoration: none;
+  .logo {
+    font-size: 2rem;
+  }
 }
 
 .tools {

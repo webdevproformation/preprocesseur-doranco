@@ -1,5 +1,19 @@
 ul {
+  margin: 0;
   padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -13,37 +27,80 @@ body {
   width: 1020px;
 }
 
+.entete nav {
+  padding: 10px;
+}
 .entete nav:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.entete nav:first-child .zone1 {
-  width: 40%;
+.entete nav:first-child form {
+  width: 540px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  color: #855dc1;
 }
-.entete nav:first-child .zone1 form input[type=submit] {
+.entete nav:first-child form input[type=submit] {
   display: inline-block;
   padding: 15px 30px;
   background-color: #543385;
   color: white;
   border-radius: 30px;
+  cursor: pointer;
   border: none;
   padding: 12px 23px;
+}
+.entete nav:first-child form input[type=submit]:hover {
+  background-color: #412868;
+}
+.entete nav:first-child form input[type=text] {
+  padding: 12px 23px;
+  border: none;
+  border-radius: 5px;
+}
+.entete nav:first-child form span {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.entete nav:first-child form .fa {
+  font-size: 1.2rem;
+  margin: 0 0 0 10px;
+}
+.entete nav:first-child ul {
+  display: flex;
+  align-items: center;
+}
+.entete nav:first-child li:first-child {
+  margin-left: 0;
+}
+.entete nav:first-child li {
+  margin-left: 30px;
+}
+.entete nav:first-child li a {
+  color: black;
+  font-size: 0.9rem;
+}
+.entete nav:last-child {
+  background-color: #f5f5f5;
 }
 .entete nav:last-child ul {
   display: flex;
 }
-
-figure {
-  margin: 0;
-  padding: 0;
+.entete nav:last-child li {
+  margin-right: 30px;
 }
-
-a {
-  text-decoration: none;
+.entete nav:last-child li a {
+  color: black;
+  font-size: 0.8rem;
+}
+.entete nav:last-child li a:hover {
+  color: #007fad;
+}
+.entete .logo {
+  font-size: 2rem;
 }
 
 .tools {
@@ -82,6 +139,10 @@ a {
   background-color: #007d91;
   color: white;
   border-radius: 30px;
+  cursor: pointer;
+}
+.tools article a:hover {
+  background-color: #005a68;
 }
 
 .app {
